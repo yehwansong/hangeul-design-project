@@ -86,7 +86,7 @@ body {
   animation-timing-function: steps(9, end);
 }
 .rotating_4_2{
-  animation: example_end_4 1s;
+  animation: example_4_end 1s;
   animation-timing-function: steps(19, end);
 }
 .reverse_rotating_4{
@@ -342,10 +342,14 @@ var wholetimeout
         	}
         	if(e.originalEvent.touches[0].pageX<c_4_width+c_4_left && e.originalEvent.touches[0].pageX >c_4_left)
         	{
-				$('.c_4').removeClass('rotating_2_4')
-				$('.c_4').removeClass('reverse_rotating_2_4')
+				$('.c_4').removeClass('rotating_4_2')
+				$('.c_4').removeClass('reverse_rotating_4_2')
 				        if (timeout2_4 !== undefined) {
 							window.clearTimeout(timeout2_4);
+				        }
+				        if (timeout_4 !== undefined) {
+				        	console.log('clreare')
+				            			window.clearTimeout(timeout_4);
 				        }
 		        		if(drag_amountY>0){
 			        			$('.c_4').addClass('reverse_rotating_4')
@@ -353,14 +357,11 @@ var wholetimeout
 		        		if(drag_amountY<0){
 			        			$('.c_4').addClass('rotating_4')
 		        		} 
-				        if (timeout_4 !== undefined) {
-				            			window.clearTimeout(timeout_4);
-				        }
 				        timeout_4= window.setTimeout(function () {
 								    			if($('.c_4').hasClass('reverse_rotating_4')){
 							        				$('.c_4').addClass('reverse_rotating_4_2')
 							        				$('.c_4').removeClass('reverse_rotating_4')
-								    			}else{
+								    			}else if($('.c_4').hasClass('rotating_4')){
 							        				$('.c_4').addClass('rotating_4_2')
 							        				$('.c_4').removeClass('rotating_4')
 								    			}
@@ -369,7 +370,20 @@ var wholetimeout
 							        				$('.c_4').removeClass('rotating_4_2')
 								    			},1000)
 				        }, 250);
-        	}
+        	}else{
+				        timeout_4= window.setTimeout(function () {
+								    			if($('.c_4').hasClass('reverse_rotating_4')){
+							        				$('.c_4').addClass('reverse_rotating_4_2')
+							        				$('.c_4').removeClass('reverse_rotating_4')
+								    			}else if($('.c_4').hasClass('rotating_4')){
+							        				$('.c_4').addClass('rotating_4_2')
+							        				$('.c_4').removeClass('rotating_4')
+								    			}
+								    			timeout2_4 = window.setTimeout(function () {
+							        				$('.c_4').removeClass('reverse_rotating_4_2')
+							        				$('.c_4').removeClass('rotating_4_2')
+								    			},1000)
+				        }, 250);}
     })
     $("body").bind('touchend mouseup', function(e){
     	wholetimeout = setTimeout(function(){
