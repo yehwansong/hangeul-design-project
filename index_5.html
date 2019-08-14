@@ -18,8 +18,18 @@ body {
 	margin: 0;
 	padding: 0;
 }
+#wrap{
+	width: 100vw;
+	height: 100%;
+	background-size: 100%;
+	position: absolute;
+	left: 0;
+	z-index: 100;
+	top: 0;
+	background-image: url(hangul/new/background-01.png)
+}
 .c{
-	background-size: 1111vw 100%;
+	background-size: 49.99% 100%;
 	top: 0;
 	left: 0;
 	position: absolute;
@@ -34,6 +44,7 @@ body {
 	animation: none
 }
 .c_3{
+	-webkit-clip-path: polygon(1.5% 0, 99.5% 0, 99.5% 100%, 1.5% 100%);;
 	background-image: url(hangul/new/untitled-6-03.png);
 	animation: none
 }
@@ -66,7 +77,7 @@ body {
 	background-image: url(hangul/untitled-2-10.png);
 }
 .rotating{
-  animation: example 0.25s infinite;
+  animation: example 0.20s infinite;
   animation-timing-function: steps(9, end);
 }
 .rotating_2{
@@ -74,7 +85,7 @@ body {
   animation-timing-function: steps(19, end);
 }
 .reverse_rotating{
-  animation: reverse_example 0.25s infinite;
+  animation: reverse_example 0.20s infinite;
   animation-timing-function: steps(9, end);
 }
 .reverse_rotating_2{
@@ -82,7 +93,7 @@ body {
   animation-timing-function: steps(19, end);
 }
 .rotating_4{
-  animation: example_4 0.25s infinite;
+  animation: example_4 0.20s infinite;
   animation-timing-function: steps(9, end);
 }
 .rotating_4_2{
@@ -90,7 +101,7 @@ body {
   animation-timing-function: steps(19, end);
 }
 .reverse_rotating_4{
-  animation: reverse_4_example 0.25s infinite;
+  animation: reverse_4_example 0.20s infinite;
   animation-timing-function: steps(9, end);
 }
 .reverse_rotating_4_2{
@@ -404,10 +415,10 @@ var wholetimeout
 
 </script>
 <div id="wrap">
+</div>
     <div class="c b 	c_1 c_1_b"></div>
     <div class="c b 	c_2 c_2_b"></div>
     <div class="c b 	c_3 c_3_b"></div>
     <div class="c b 	c_4 c_4_b"></div>
-</div>
 
 </body>

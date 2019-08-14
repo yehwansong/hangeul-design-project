@@ -454,6 +454,7 @@ if(isMobile){
         }
     })
     $("body").bind('touchend mouseup', function(e){ 
+        $('.k_right').css({'opacity':0})
         clicked = false
         $('body').css({'pointerEvents':'none'})
 
@@ -477,7 +478,8 @@ if(isMobile){
             $('#wrap .k_right').animate({marginTop:0}, {duration: 1500, easing: 'easeOutBounce'});
             $('.a_right').animate({top:0}, {duration: 1500, easing: 'easeOutBounce'});
             setTimeout(function(){ 
-        $('body').css({'pointerEvents':'auto'})
+                $('.k_right').css({'opacity':1})
+                $('body').css({'pointerEvents':'auto'})
             },1600)
         for (var k = 10; k >= 1; k--) {
             $('#wrap>.k_wrap_wrap_'+k).animate({width : 0.5*w}, {duration: 1500, easing: 'easeOutBounce'});
