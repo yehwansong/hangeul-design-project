@@ -325,8 +325,8 @@ if(isMobile){
 
     $("body").bind('touchstart mousedown', function(e){
         clicked = true
-        startX = e.pageX
-        startY = e.pageY
+        startX = e.originalEvent.touches[e.originalEvent.touches.length-1].pageX 
+        startY = e.originalEvent.touches[e.originalEvent.touches.length-1].pageY
     })
 
     $("body").bind('touchmove mousemove', function(e){ 
@@ -396,6 +396,7 @@ if(isMobile){
             }else{
                 $('#wrap>.k_wrap_wrap_1').removeClass('k_wrap_wrap_animate')
             }
+                $('#wrap').css({'opacity':drag_amountX/100})
                 $('#wrap>.k_wrap_wrap_9').css({'width':map_range(drag_amountX, 0, 0.8*w - 0.2*w, 0, 4.50*unit_w) + 5*unit_w})
                 $('#wrap>.k_wrap_wrap_8').css({'width':map_range(drag_amountX, 0, 0.8*w - 0.2*w, 0, 3.50*unit_w) + 5*unit_w})
                 $('#wrap>.k_wrap_wrap_7').css({'width':map_range(drag_amountX, 0, 0.8*w - 0.2*w, 0, 2.00*unit_w) + 5*unit_w})
