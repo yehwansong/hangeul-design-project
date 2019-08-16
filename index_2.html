@@ -36,7 +36,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                box-shadow: 1vh 0 1vh blue;
+                box-shadow: 1vh 0 5vh blue;
             }
             .k_wrap_wrap_animate{
                 right: 0 !important
@@ -60,7 +60,7 @@
                 top: -5vw !important;
 
                 background-repeat: no-repeat !important;
-                background-image: url(ka-01-01.png) !important;
+                background-image: url(ka/ka-01-01.png) !important;
                 background-size: contain !important;
                 position: absolute !important;
             }
@@ -69,6 +69,21 @@
                 height: 400%;
                 position: absolute;
                 top: 0;
+            }
+            .overlay_2{
+                opacity: 0;
+                z-index: 1000;
+                pointer-events: none;
+                right: 20vw;
+                top: 0;
+                position: absolute;
+                width: 0%;
+                height: 100%;
+                background: linear-gradient(to left, rgba(10, 10, 10, 0.68) 0.42%, rgba(128, 128, 128, 0) 92.86%);
+                transition: opacity 1s
+            }
+            .show{
+                opacity: 1
             }
             #wrap > .k_wrap_wrap_1{
                 right : 54%;
@@ -120,10 +135,25 @@
                 z-index: 20;
                 height: 100%
             }
+            .za_back{
+                transition: opacity 1s;
+                background:linear-gradient(to right, rgba(0, 192, 255, 0) 15.97%, rgb(234, 150, 21) 22.5%, #d8dd23 34.45%);
+                position: absolute;
+
+                width: 28.5vw;
+                height: 100%;
+                margin-top: 0px;
+                z-index: 0;
+                right: 0;
+                top: 0;
+                pointer-events: none;
+                opacity: 0
+            }
             .k_wrap_wrap{
                 transition: right 0.3s ease-out, top 0.2s ease-out;
             }
             .k, .k_top, .k_top_2, .k_right, .k_mid{
+                z-index: 1;
                 background-repeat: no-repeat;
                 background-size: 27.5vw;
                 position: absolute;
@@ -134,20 +164,25 @@
                 background-position-x: right;
                 right: 0;
             }
+            .
+            .k_top{
+                z-index: 10000
+            }
             .k_top_2{
                 position: absolute;
+                transition: top 0.3s ease-out
             }
             .k{
                 right: -30%;
                 transition: background-position 0.3s ease-out, right 0.3s ease-out;
-                background-image: url(ka-02-01.png);
+                background-image: url(ka/ka-02-01.png);
             }
             .k_right{
                 transition: top 0.3s ease-out, right 0.3s ease-out;
                 top: -15vh;
                 right: -14vw;
                 background-position-x: 9.7625vw;
-                background-image: url(ka-04-01.png)
+                background-image: url(ka/ka-04-01.png)
             }
             .k_right_animate{
                 right: -1.2vw;
@@ -157,11 +192,11 @@
                 right: -11vw;
             }
             .k_wrap_10 .k_right_animate{
-                right: -3vw;
+                right: -2.7vw;
                 width: 28.5vw;
             }
             .k_wrap_9 .k_right_animate{
-                right: -8vw;
+                right: -7.9vw;
                 width: 28.5vw;
             }
             .k_mid{
@@ -170,7 +205,7 @@
                 background-size: 27.5vw;
                 background-repeat: repeat-y;
                 height: 100px;
-                background-image: url(ka-05-01.png);
+                background-image: url(ka/ka-05-01.png);
             }
             .k_mid_animate_2{
                 transform-origin: bottom;
@@ -189,8 +224,8 @@
                 right: 0%
             }
             .k_top, .k_top_2{
-                transition: background-position 0.3s ease-out;
-                background-image: url(ka-03-01.png);
+                transition: background-position 0.3s ease-out,;
+                background-image: url(ka/ka-03-01.png);
                 width: 28.5vw;
                 height: 57vw;
             }
@@ -199,7 +234,7 @@
             }
             .k_top_2{
                 top: -15vh;
-                transition: top 0.2s ease-out, width 0.2s ease-in-out;
+                transition:background-position 0.3s ease-out, top 0.2s ease-out, width 0.2s ease-in-out;
                 transform:scaleX(0.8);
                     }
             .k_top_2_animate{
@@ -263,23 +298,27 @@
                 90%  { margin-left: 0%;}*/
             }
             #wrap > div > .a_right{ width: 100%;
-                height: 50%;
+                height: 100%;
                 margin-top: -30%;
                 right: -5vw;
                 width: 25vw !important;
                 top: -5vw;
+                box-shadow: 1vh 0 5vh blue, 0vh 5vh 5vh rgba(0, 0, 0, 0.56);
 
                 background-repeat: no-repeat !important;
-                background-image: url(ka-01-02.png) !important;
+                background-image: url(ka/ka-01-02.png) !important;
                 background-size: 100% !important;
                 position: absolute !important;
             }
             img{
                 z-index: 1000000;
-                width: 20vw;
+                width: 22vw;
                 position: absolute;
                 right: 0;
                 bottom: 1vh;
+            }
+            .opacity_1{
+                opacity: 1
             }
             .overlay{
 z-index: 10000;
@@ -299,6 +338,7 @@ background: linear-gradient(rgba(255, 255, 255, 0) 49.58%, gray);
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="js/pathseg.js"></script>
+<script src="redirect.js"></script>
 <script type="text/javascript">
 var isMobile = false; //initiate as false
 // device detection
@@ -357,6 +397,7 @@ if(isMobile){
 
 
     $("body").bind('touchstart mousedown', function(e){
+            $('.overlay_2').addClass('show');
         clicked = true
         startX = e.originalEvent.touches[e.originalEvent.touches.length-1].pageX 
         startY = e.originalEvent.touches[e.originalEvent.touches.length-1].pageY
@@ -426,6 +467,7 @@ if(isMobile){
                 $('#wrap>.k_wrap_wrap_1').removeClass('k_wrap_wrap_animate')
             }
                 $('#wrap>.k_wrap_wrap_9').css({'width':map_range(drag_amountX, 0, 0.8*w - 0.2*w, 0, 4.50*unit_w) + 5*unit_w})
+                $('.overlay_2').css({'width':map_range(drag_amountX, 0, 0.8*w - 0.2*w, 0, 4.50*unit_w) - 1*unit_w})
                 $('#wrap>.k_wrap_wrap_8').css({'width':map_range(drag_amountX, 0, 0.8*w - 0.2*w, 0, 2.00*unit_w) + 5*unit_w})
                 $('#wrap>.k_wrap_wrap_7').css({'width':map_range(drag_amountX, 0, 0.8*w - 0.2*w, 0, 1.50*unit_w) + 5*unit_w})
                 $('#wrap>.k_wrap_wrap_6').css({'width':map_range(drag_amountX, 0, 0.8*w - 0.2*w, 0, 1.00*unit_w) + 5*unit_w})
@@ -435,33 +477,33 @@ if(isMobile){
                 $('#wrap>.k_wrap_wrap_2').css({'width':map_range(drag_amountX, 0, 0.8*w - 0.2*w, 0, 0.00*unit_w) + 5*unit_w})
                 $('#wrap>.k_wrap_wrap_1').css({'width':map_range(drag_amountX, 0, 0.8*w - 0.2*w, 0, 0.00*unit_w) + 5*unit_w})
 
-            $('.a_right_9').css({'height':h - drag_amountY})
-            $('.a_right_8').css({'height':h - drag_amountY*0.9})
-            $('.a_right_7').css({'height':h - drag_amountY*0.8})
-            $('.a_right_6').css({'height':h - drag_amountY*0.7})
-            $('.a_right_5').css({'height':h - drag_amountY*0.6})
-            $('.a_right_4').css({'height':h - drag_amountY*0.5})
-            $('.a_right_3').css({'height':h - drag_amountY*0.4})
-            $('.a_right_2').css({'height':h - drag_amountY*0.3})
-            $('.a_right_1').css({'height':h - drag_amountY*0.2})
+            $('.a_right_9').css({'height':h - drag_amountY*1.0*0.75})
+            $('.a_right_8').css({'height':h - drag_amountY*0.9*0.75})
+            $('.a_right_7').css({'height':h - drag_amountY*0.8*0.75})
+            $('.a_right_6').css({'height':h - drag_amountY*0.7*0.75})
+            $('.a_right_5').css({'height':h - drag_amountY*0.6*0.75})
+            $('.a_right_4').css({'height':h - drag_amountY*0.5*0.75})
+            $('.a_right_3').css({'height':h - drag_amountY*0.4*0.75})
+            $('.a_right_2').css({'height':h - drag_amountY*0.3*0.75})
+            $('.a_right_1').css({'height':h - drag_amountY*0.2*0.75})
             // $('#wrap .k_right').css({'margin-top':map_range(drag_amountY, 0, h-0.675*w, 0, h-0.675*w)})
             $('#wrap .k').css({'margin-top':map_range(drag_amountY, 0, h-0.675*w, 0, h-0.675*w)})
             $('#wrap .k_top_2').css({'margin-top':map_range(drag_amountY, 0, h-0.675*w, 0, h-0.675*w)})
             $('#wrap .k_mid').css({'height':map_range(drag_amountY, 0, h-0.675*w, 0, h-0.675*w)+100})
             // '카'
             if(parseInt($('#wrap .k').css('margin-top'), 10) > 0.15*h ){
-                $('.k_top_2').addClass('k_top_2_animate')
+                // $('.k_top_2').addClass('k_top_2_animate')
             }else{
-                $('.k_top_2').removeClass('k_top_2_animate')
+                // $('.k_top_2').removeClass('k_top_2_animate')
             }
 
 
             // '자'
             if(parseInt($('#wrap .k').css('margin-top'), 10) > (h-0.675*w-0.3*w) ){
-                $('#wrap .k_top_2').css({'margin-top':(map_range(drag_amountY, 0, h-0.675*w, 0, h-0.675*w))/2})
                 if(0.75*w+map_range(drag_amountY, 0, h-0.675*w, 0, h-0.675*w)<h){
                     $('#wrap .k_right').css({'margin-top':map_range(drag_amountY, 0, h-0.675*w, 0, h-0.675*w)})
                 }
+                $('.za_back').addClass('opacity_1')
                 $('.k_right').addClass('k_right_animate')
                 $('.k_top').addClass('k_top_animate')
                 $('.k_mid').addClass('k_mid_animate')
@@ -501,6 +543,7 @@ if(isMobile){
                 $('.k').removeClass('k_animate')
                     $('.k_top_2').removeClass('width_0')
                     $('.k_top_2').removeClass('k_animate_2')
+                $('.za_back').removeClass('opacity_1')
                 // $('#wrap>.k_wrap_wrap_9').removeClass('k_wrap_wrap_animate_2')
                 // $('#wrap>.k_wrap_wrap_8').removeClass('k_wrap_wrap_animate')
                 // $('#wrap>.k_wrap_wrap_7').removeClass('k_wrap_wrap_animate')
@@ -514,6 +557,7 @@ if(isMobile){
         }
     })
     $("body").bind('touchend mouseup', function(e){ 
+                $('.za_back').removeClass('opacity_1')
          $('.a_right').animate({'height':h}, {duration: 1500, easing: 'easeOutBounce'});
         $('.k_right').css({'opacity':0})
         clicked = false
@@ -545,11 +589,13 @@ if(isMobile){
             },1600)
         for (var k = 10; k >= 1; k--) {
             $('#wrap>.k_wrap_wrap_'+k).animate({width : 0.5*w}, {duration: 1500, easing: 'easeOutBounce'});
+            $('.overlay_2').removeClass('show')
         }
     })
 });
 </script>
-<img src="ka_info-02.png">
+<img src="ka/ka_info-02.png">
+<div class="overlay_2"></div>
 <div class="overlay"></div>
     <div id="wrap">
         <div class="k_wrap_wrap k_wrap_wrap_10">
@@ -559,6 +605,7 @@ if(isMobile){
                 <div class="k_top_2"></div>
                 <div class="k_right"></div>
                 <div class="k"></div>
+                <div class='za_back'></div>
             </div>
         </div>
         <div class="k_wrap_wrap k_wrap_wrap_9">
@@ -568,6 +615,7 @@ if(isMobile){
                 <div class="k_top_2"></div>
                 <div class="k_right"></div>
                 <div class="k"></div>
+                <div class='za_back'></div>
             </div>
         </div>
         <div class="k_wrap_wrap k_wrap_wrap_8">
@@ -577,6 +625,7 @@ if(isMobile){
                 <div class="k_top_2"></div>
                 <div class="k_right"></div>
                 <div class="k"></div>
+                <div class='za_back'></div>
             </div>
         </div>
         <div class="k_wrap_wrap k_wrap_wrap_7">
@@ -586,6 +635,7 @@ if(isMobile){
                 <div class="k_top_2"></div>
                 <div class="k_right"></div>
                 <div class="k"></div>
+                <div class='za_back'></div>
             </div>
         </div>
         <div class="k_wrap_wrap k_wrap_wrap_6">
@@ -595,6 +645,7 @@ if(isMobile){
                 <div class="k_top_2"></div>
                 <div class="k_right"></div>
                 <div class="k"></div>
+                <div class='za_back'></div>
             </div>
         </div>
         <div class="k_wrap_wrap k_wrap_wrap_5">
@@ -604,6 +655,7 @@ if(isMobile){
                 <div class="k_top_2"></div>
                 <div class="k_right"></div>
                 <div class="k"></div>
+                <div class='za_back'></div>
             </div>
         </div>
         <div class="k_wrap_wrap k_wrap_wrap_4">
@@ -613,6 +665,7 @@ if(isMobile){
                 <div class="k_top_2"></div>
                 <div class="k_right"></div>
                 <div class="k"></div>
+                <div class='za_back'></div>
             </div>
         </div>
         <div class="k_wrap_wrap k_wrap_wrap_3">
@@ -622,6 +675,7 @@ if(isMobile){
                 <div class="k_top_2"></div>
                 <div class="k_right"></div>
                 <div class="k"></div>
+                <div class='za_back'></div>
             </div>
         </div>
         <div class="k_wrap_wrap k_wrap_wrap_2">
@@ -631,6 +685,7 @@ if(isMobile){
                 <div class="k_top_2"></div>
                 <div class="k_right"></div>
                 <div class="k"></div>
+                <div class='za_back'></div>
             </div>
         </div>
         <div class="k_wrap_wrap k_wrap_wrap_1">
@@ -640,6 +695,7 @@ if(isMobile){
                 <div class="k_top_2"></div>
                 <div class="k_right"></div>
                 <div class="k"></div>
+                <div class='za_back'></div>
             </div>
         </div>
         <div class="a_wrap a_wrap_1">
