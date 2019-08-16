@@ -44,7 +44,7 @@
                 height: 60%;
                 position: absolute;
                 z-index: 0;
-                opacity: 0.2;
+                opacity: 0.4;
             }
             body {
               text-align: center;
@@ -232,8 +232,8 @@
             }
             .ing_11{
                 background-image:url(wal/Untitled-15-25-11.png);
-                background-size: contain;
-                background-repeat: repeat-x;
+                background-size: contain !important;
+                background-repeat: repeat-x !important;
                 width: 5%;
                 height: 30%;
                 left: 90%;
@@ -286,111 +286,13 @@ $( document ).ready(function() {
         console.log($('#wrap'))
         $('body').css({'width':w})
         $('body').css({'height':h})
-
-
-            $('.ing_1').css({
-                'width': 30*w_100,
-                'height': 20*h_100,
-                'left': 60*w_100,
-                'top': 0*h_100
-            })
-            $('.ing_2').css({
-                'width': 30*w_100,
-                'height': 40*h_100,
-                'left': 70*w_100,
-                'top': 0*h_100
-            })
-            $('.ing_3').css({
-                'width': 11*w_100,
-                'height': 20*h_100,
-                'left': 89*w_100,
-                'top': 0*h_100
-            })
-            $('.ing_4').css({
-                'width': 40*w_100,
-                'height': 20*h_100,
-                'left': 30*w_100,
-                'top': 10*h_100
-            })
-            $('.ing_5').css({
-                'width': 100*w_100,
-                'height': 20*h_100,
-                'left': -10*w_100,
-                 'top': 10*h_100
-             })
-            $('.ing_6').css({
-                'width': 110*w_100,
-                'height': 20*h_100,
-                'left': -35*w_100,
-                'top': 20*h_100
-            })
-            $('.ing_6_1').css({
-                'width': 30*w_100,
-                'height': 10*h_100,
-                'left': 50*w_100,
-                'top': 30*h_100
-            })
-            $('.ing_7').css({
-                'width': 30*w_100,
-                'height': 30*h_100,
-                'left': 50*w_100,
-                'top': 30*h_100
-            })
-            $('.ing_7_1').css({
-                'width': 30*w_100,
-                'height': 10*h_100,
-                'left': 50*w_100,
-                'top': 50*h_100
-            })
-            $('.ing_8').css({
-                'width': 60*w_100,
-                'height': 20*h_100,
-                'left': 20*w_100,
-                'top': 40*h_100
-            })
-            $('.ing_8_2').css({
-                'width': 80*w_100,
-                'height': 20*h_100,
-                'left': -10*w_100,
-                'top': 35*h_100
-            })
-            $('.ing_8_1').css({
-                'width': 30*w_100,
-                'height': 30*h_100,
-                'left': 0*w_100,
-                'top': 40*h_100
-            })
-            $('.ing_9').css({
-                'width': 20*w_100,
-                'height': 50*h_100,
-                'left': 0*w_100,
-                'bottom': 0*h_100
-            })
-            $('.ing_9_1').css({
-                'width': 20*w_100,
-                'height': 10*h_100,
-                'left': 0*w_100,
-                'top': 90*h_100
-            })
-            $('.ing_10').css({
-                'width': 95*w_100,
-                'height': 30*h_100,
-                'left': 0*w_100,
-                'top': 70*h_100
-            })
-            $('.ing_11').css({
-                'width': 20*w_100,
-                'height': 40*h_100,
-                'left': 80*w_100,
-                'top': 0*h_100
-            })
-
     if(isMobile){
         document.addEventListener('touchmove', function(e) {
             e.preventDefault();
         }, { passive: false });
     }
-});
+
+
 
 
 
@@ -449,19 +351,19 @@ var counter = 0
 
 
 
-var image_array = ['ing-01.png'];
+var image_array = ['wal/ing-35.png'];
 var elements = []
 makeelements()
 function makeelements(){
             for (var k = 0; k < 5;k += 1) {
                 elements[k] = Bodies.circle(
                     80, 
-                    80, 50, {
+                    80, 48, {
                     render: {
                         sprite: {
                             texture: image_array[0],
-                            xScale: 0.4,
-                            yScale: 0.4
+                            xScale: 0.38,
+                            yScale: 0.38
                         },
                         strokeStyle: '#556270',
                         lineWidth: 1
@@ -796,6 +698,108 @@ function easeOut(t, d){
 
     World.add(world, mouseConstraint);
     render.mouse = mouse;
+
+
+
+
+
+            $('.ing_1').css({
+                'width': 30*w_100,
+                'height': 20*h_100,
+                'left': 60*w_100,
+                'top': 0*h_100
+            })
+            $('.ing_2').css({
+                'width': 30*w_100,
+                'height': 40*h_100,
+                'left': 70*w_100,
+                'top': 0*h_100
+            })
+            $('.ing_3').css({
+                'width': 11*w_100,
+                'height': 20*h_100,
+                'left': 89*w_100,
+                'top': 0*h_100
+            })
+            $('.ing_4').css({
+                'width': 40*w_100,
+                'height': 20*h_100,
+                'left': 30*w_100,
+                'top': 10*h_100
+            })
+            $('.ing_5').css({
+                'width': 100*w_100,
+                'height': 20*h_100,
+                'left': -10*w_100,
+                 'top': 10*h_100
+             })
+            $('.ing_6').css({
+                'width': 110*w_100,
+                'height': 20*h_100,
+                'left': -35*w_100,
+                'top': 20*h_100
+            })
+            $('.ing_6_1').css({
+                'width': 30*w_100,
+                'height': 10*h_100,
+                'left': 50*w_100,
+                'top': 30*h_100
+            })
+            $('.ing_7').css({
+                'width': 30*w_100,
+                'height': 30*h_100,
+                'left': 50*w_100,
+                'top': 30*h_100
+            })
+            $('.ing_7_1').css({
+                'width': 30*w_100,
+                'height': 10*h_100,
+                'left': 50*w_100,
+                'top': 50*h_100
+            })
+            $('.ing_8').css({
+                'width': 60*w_100,
+                'height': 20*h_100,
+                'left': 20*w_100,
+                'top': 40*h_100
+            })
+            $('.ing_8_2').css({
+                'width': 80*w_100,
+                'height': 20*h_100,
+                'left': -10*w_100,
+                'top': 35*h_100
+            })
+            $('.ing_8_1').css({
+                'width': 30*w_100,
+                'height': 30*h_100,
+                'left': 0*w_100,
+                'top': 40*h_100
+            })
+            $('.ing_9').css({
+                'width': 20*w_100,
+                'height': 50*h_100,
+                'left': 0*w_100,
+                'bottom': 0*h_100
+            })
+            $('.ing_9_1').css({
+                'width': 20*w_100,
+                'height': 10*h_100,
+                'left': 0*w_100,
+                'top': 90*h_100
+            })
+            $('.ing_10').css({
+                'width': 95*w_100,
+                'height': 30*h_100,
+                'left': 0*w_100,
+                'top': 70*h_100
+            })
+            $('.ing_11').css({
+                'width': 20*w_100,
+                'height': 40*h_100,
+                'left': 80*w_100,
+                'top': 0*h_100
+            })
+});
 </script>
 <div class="background_color"></div>
 <div class="overlay_top"></div>

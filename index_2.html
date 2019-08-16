@@ -64,18 +64,6 @@
                 background-size: contain !important;
                 position: absolute !important;
             }
-            .a_right{ width: 100%;
-                height: 100%;
-                margin-top: -25%;
-                right: -5vw;
-                width: 25vw !important;
-                top: -5vw;
-
-                background-repeat: no-repeat !important;
-                background-image: url(ka-00-01.png) !important;
-                background-size: contain !important;
-                position: absolute !important;
-            }
             #wrap > div{
                 width: 50vw;
                 height: 400%;
@@ -162,7 +150,7 @@
                 background-image: url(ka-04-01.png)
             }
             .k_right_animate{
-                right: 0vw;
+                right: -1.2vw;
                 width: 32vw
             }
             .k_wrap_10 .k_right{
@@ -189,7 +177,7 @@
                 transform:scaleY(0.65);
             }
             .width_0{
-                transform:scaleX(0) !important;
+                width: 0 !important
             }
             .width_08{
                 transform:scaleX(0.8);
@@ -211,7 +199,7 @@
             }
             .k_top_2{
                 top: -15vh;
-                transition: top 0.3s ease-out, transform 0.3s ease-out;
+                transition: top 0.2s ease-out, width 0.2s ease-in-out;
                 transform:scaleX(0.8);
                     }
             .k_top_2_animate{
@@ -273,6 +261,18 @@
 /*                10%  { margin-left: 0%;}
                 70%   { margin-left: 10%;}
                 90%  { margin-left: 0%;}*/
+            }
+            #wrap > div > .a_right{ width: 100%;
+                height: 50%;
+                margin-top: -30%;
+                right: -5vw;
+                width: 25vw !important;
+                top: -5vw;
+
+                background-repeat: no-repeat !important;
+                background-image: url(ka-01-02.png) !important;
+                background-size: 100% !important;
+                position: absolute !important;
             }
             img{
                 z-index: 1000000;
@@ -435,7 +435,15 @@ if(isMobile){
                 $('#wrap>.k_wrap_wrap_2').css({'width':map_range(drag_amountX, 0, 0.8*w - 0.2*w, 0, 0.00*unit_w) + 5*unit_w})
                 $('#wrap>.k_wrap_wrap_1').css({'width':map_range(drag_amountX, 0, 0.8*w - 0.2*w, 0, 0.00*unit_w) + 5*unit_w})
 
-            $('.a_right').css({'top':map_range(drag_amountY, 0, h-0.675*w, 0, h-0.675*w)})
+            $('.a_right_9').css({'height':h - drag_amountY})
+            $('.a_right_8').css({'height':h - drag_amountY*0.9})
+            $('.a_right_7').css({'height':h - drag_amountY*0.8})
+            $('.a_right_6').css({'height':h - drag_amountY*0.7})
+            $('.a_right_5').css({'height':h - drag_amountY*0.6})
+            $('.a_right_4').css({'height':h - drag_amountY*0.5})
+            $('.a_right_3').css({'height':h - drag_amountY*0.4})
+            $('.a_right_2').css({'height':h - drag_amountY*0.3})
+            $('.a_right_1').css({'height':h - drag_amountY*0.2})
             // $('#wrap .k_right').css({'margin-top':map_range(drag_amountY, 0, h-0.675*w, 0, h-0.675*w)})
             $('#wrap .k').css({'margin-top':map_range(drag_amountY, 0, h-0.675*w, 0, h-0.675*w)})
             $('#wrap .k_top_2').css({'margin-top':map_range(drag_amountY, 0, h-0.675*w, 0, h-0.675*w)})
@@ -462,26 +470,27 @@ if(isMobile){
 
 
 
-                $('#wrap>.k_wrap_wrap_9').addClass('k_wrap_wrap_animate_2')
-                $('#wrap>.k_wrap_wrap_8').addClass('k_wrap_wrap_animate')
-                $('#wrap>.k_wrap_wrap_7').addClass('k_wrap_wrap_animate')
-                $('#wrap>.k_wrap_wrap_6').addClass('k_wrap_wrap_animate')
-                $('#wrap>.k_wrap_wrap_5').addClass('k_wrap_wrap_animate')
-                $('#wrap>.k_wrap_wrap_4').addClass('k_wrap_wrap_animate')
-                $('#wrap>.k_wrap_wrap_3').addClass('k_wrap_wrap_animate')
-                $('#wrap>.k_wrap_wrap_2').addClass('k_wrap_wrap_animate')
-                $('#wrap>.k_wrap_wrap_1').addClass('k_wrap_wrap_animate')
+                // $('#wrap>.k_wrap_wrap_9').addClass('k_wrap_wrap_animate_2')
+                // $('#wrap>.k_wrap_wrap_8').addClass('k_wrap_wrap_animate')
+                // $('#wrap>.k_wrap_wrap_7').addClass('k_wrap_wrap_animate')
+                // $('#wrap>.k_wrap_wrap_6').addClass('k_wrap_wrap_animate')
+                // $('#wrap>.k_wrap_wrap_5').addClass('k_wrap_wrap_animate')
+                // $('#wrap>.k_wrap_wrap_4').addClass('k_wrap_wrap_animate')
+                // $('#wrap>.k_wrap_wrap_3').addClass('k_wrap_wrap_animate')
+                // $('#wrap>.k_wrap_wrap_2').addClass('k_wrap_wrap_animate')
+                // $('#wrap>.k_wrap_wrap_1').addClass('k_wrap_wrap_animate')
                     $('.k_top_2').addClass('width_0')
+                    $('.k_top_2').addClass('k_animate_2')
                 console.log(parseInt($('#wrap .k').css('margin-top'), 10) > (h-0.675*w-0.15*w))
-                if(parseInt($('#wrap .k').css('margin-top'), 10) > (h-0.675*w-0.15*w) ){
-                    $('.k_mid').addClass('k_mid_animate_2')
-                    $('.k_top').addClass('width_08')
-                    $('.k_top_2').removeClass('width_0')
-                }else{
-                    $('.k_mid').removeClass('k_mid_animate_2')
-                    $('.k_top').removeClass('width_08')
-                    $('.k_top_2').addClass('width_0')
-                }
+                // if(parseInt($('#wrap .k').css('margin-top'), 10) > (h-0.675*w-0.15*w) ){
+                //     $('.k_mid').addClass('k_mid_animate_2')
+                //     $('.k_top').addClass('width_08')
+                //     $('.k_top_2').removeClass('width_0')
+                // }else{
+                //     $('.k_mid').removeClass('k_mid_animate_2')
+                //     $('.k_top').removeClass('width_08')
+                //     $('.k_top_2').addClass('width_0')
+                // }
 
             }else{
                 $('#wrap .k_right').css({'margin-top':map_range(drag_amountY, 0, h-0.675*w, 0, h-0.675*w)-0.15*h})
@@ -490,6 +499,8 @@ if(isMobile){
                 $('.k_mid').removeClass('k_mid_animate')
                 $('.k_mid').removeClass('k_mid_animate_2')
                 $('.k').removeClass('k_animate')
+                    $('.k_top_2').removeClass('width_0')
+                    $('.k_top_2').removeClass('k_animate_2')
                 // $('#wrap>.k_wrap_wrap_9').removeClass('k_wrap_wrap_animate_2')
                 // $('#wrap>.k_wrap_wrap_8').removeClass('k_wrap_wrap_animate')
                 // $('#wrap>.k_wrap_wrap_7').removeClass('k_wrap_wrap_animate')
@@ -503,6 +514,7 @@ if(isMobile){
         }
     })
     $("body").bind('touchend mouseup', function(e){ 
+         $('.a_right').animate({'height':h}, {duration: 1500, easing: 'easeOutBounce'});
         $('.k_right').css({'opacity':0})
         clicked = false
         $('body').css({'pointerEvents':'none'})
@@ -632,7 +644,15 @@ if(isMobile){
         </div>
         <div class="a_wrap a_wrap_1">
                 <div class="a"></div>
-                <div class="a_right"></div>
+                <div class="a_right a_right_1"></div>
+                <div class="a_right a_right_2"></div>
+                <div class="a_right a_right_3"></div>
+                <div class="a_right a_right_4"></div>
+                <div class="a_right a_right_5"></div>
+                <div class="a_right a_right_6"></div>
+                <div class="a_right a_right_7"></div>
+                <div class="a_right a_right_8"></div>
+                <div class="a_right a_right_9"></div>
         </div>
     </div>
 </body>
