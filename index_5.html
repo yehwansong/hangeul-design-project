@@ -12,7 +12,7 @@ body {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  background: #fd4734;
+  background: linear-gradient(#ff331e, #ff4b38 45.8%);
 }
 *{
 	margin: 0;
@@ -28,34 +28,29 @@ body {
 	top: 0;
 	background-image: url(hangeul/background-01.PNG)
 }
-.c {
-	position: absolute;
-	overflow: hidden;
-}
-.c img{
-	width: 1111.11vw;
-	height: 100%;
+.c{
+	background-size: 1111.11vw 100%;
 	top: 0;
 	left: 0;
 	position: absolute;
 	background-position: 0%;
 }
 .c_1{
-	/*background-image: url(hangeul/Untitled-6-01.PNG);*/
+	background-image: url(hangeul/Untitled-6-01.PNG);
 	animation: none
 }
 .c_2{
-	/*background-image: url(hangeul/Untitled-6-02.PNG);*/
+	background-image: url(hangeul/Untitled-6-02.PNG);
 	animation: none
 }
 .c_3{
 	-webkit-clip-path: polygon(1.5% 0, 99.5% 0, 99.5% 100%, 1.5% 100%);;
-	/*background-image: url(hangeul/Untitled-6-03.PNG);*/
+	background-image: url(hangeul/Untitled-6-03.PNG);
 	animation: none
 }
-.c_4 img{
-	width: 1388.75vw;
-	height: 100%;
+.c_4{
+	background-size: 1388.75vw 100%;
+	background-image: url(hangeul/Untitled-6-04.PNG);
 	animation: none
 }
 .ex{
@@ -82,74 +77,80 @@ body {
 	background-image: url(hangul/Untitled-2-10.PNG);
 }
 .rotating{
-  animation: example 0.18s infinite;
+  animation: example 0.20s infinite;
   animation-timing-function: steps(9, end);
 }
 .rotating_2{
-  animation: example_end 0.57s;
+  animation: example_end 1s;
   animation-timing-function: steps(19, end);
 }
 .reverse_rotating{
-  animation: reverse_example 0.18s infinite;
+  animation: reverse_example 0.20s infinite;
   animation-timing-function: steps(9, end);
 }
 .reverse_rotating_2{
-  animation: reverse_example_end 0.57s;
+  animation: reverse_example_end 1s;
   animation-timing-function: steps(19, end);
 }
 .rotating_4{
-  animation: example_4 0.18s infinite;
+  animation: example_4 0.20s infinite;
   animation-timing-function: steps(9, end);
 }
 .rotating_4_2{
-  animation: example_4_end 0.57s;
+  animation: example_4_end 1s;
   animation-timing-function: steps(19, end);
 }
 .reverse_rotating_4{
-  animation: reverse_4_example 0.18s infinite;
+  animation: reverse_4_example 0.20s infinite;
   animation-timing-function: steps(9, end);
 }
 .reverse_rotating_4_2{
-  animation: reverse_4_example_end 0.57s;
+  animation: reverse_4_example_end 1s;
   animation-timing-function: steps(19, end);
 }
 .b_in{
 }
+img{
+	left: 38.89vw;
+	top: 105.545vw;
+	position: absolute;
+	width: 44.44vw
+}
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes example {
-  0% {left: 0vw}
-  100%{left: -199.98vw}
+  0% {background-position: 0vw}
+  100%{background-position: -199.98vw}
 }
 @-webkit-keyframes example_end {
-  0% {left: -222.22vw}
-  100%{left: -644.38vw}
+  0% {background-position: -222.22vw}
+  100%{background-position: -644.38vw}
 }
 @-webkit-keyframes reverse_example {
-  0% {left: -199.98vw}
-  100%{left: -0%}
+  0% {background-position: -199.98vw}
+  100%{background-position: -0%}
 }
 @-webkit-keyframes reverse_example_end {
-  0% {left: -666.66vw}
-  100%{left: -1088.78vw}
+  0% {background-position: -666.66vw}
+  100%{background-position: -1088.78vw}
 }
 
 
 @-webkit-keyframes example_4 {
-  0% {left: 0%}
-  100%{left: -249.975vw}
+  0% {background-position: 0%}
+  100%{background-position: -249.975vw}
 }
 @-webkit-keyframes example_4_end {
-  0% {left: -277.775vw}
-  100%{left: -805.475vw}
+  0% {background-position: -277.775vw}
+  100%{background-position: -805.475vw}
 }
 @-webkit-keyframes reverse_4_example {
-  0% {left: -249.975vw}
-  100%{left: -0%}
+  0% {background-position: -249.975vw}
+  100%{background-position: -0%}
 }
 @-webkit-keyframes reverse_4_example_end {
-  0% {left: -833.325vw}
-  100%{left: -1360.975vw}
+  0% {background-position: -833.325vw}
+  100%{background-position: -1360.975vw}
 }
 		</style>
 	</head>
@@ -268,98 +269,98 @@ var wholetimeout
         }
         	if(e.originalEvent.touches[0].pageX<c_1_width+c_1_left && e.originalEvent.touches[0].pageX >c_1_left)
         	{
-				$('.c_1 img').removeClass('rotating_2')
-				$('.c_1 img').removeClass('reverse_rotating_2')
+				$('.c_1').removeClass('rotating_2')
+				$('.c_1').removeClass('reverse_rotating_2')
 				        if (timeout2_1 !== undefined) {
 							window.clearTimeout(timeout2_1);
 				        }
 		        		if(drag_amountY>0){
-			        			$('.c_1 img').addClass('reverse_rotating')
+			        			$('.c_1').addClass('reverse_rotating')
 		        		}	
 		        		if(drag_amountY<0){
-			        			$('.c_1 img').addClass('rotating')
+			        			$('.c_1').addClass('rotating')
 		        		} 
 				        if (timeout_1 !== undefined) {
 				            			window.clearTimeout(timeout_1);
 				        }
 				        timeout_1 = window.setTimeout(function () {
-								    			if($('.c_1 img').hasClass('reverse_rotating')){
-							        				$('.c_1 img').addClass('reverse_rotating_2')
-							        				$('.c_1 img').removeClass('reverse_rotating')
+								    			if($('.c_1').hasClass('reverse_rotating')){
+							        				$('.c_1').addClass('reverse_rotating_2')
+							        				$('.c_1').removeClass('reverse_rotating')
 								    			}else{
-							        				$('.c_1 img').addClass('rotating_2')
-							        				$('.c_1 img').removeClass('rotating')
+							        				$('.c_1').addClass('rotating_2')
+							        				$('.c_1').removeClass('rotating')
 								    			}
 								    			timeout2_1 = window.setTimeout(function () {
-							        				$('.c_1 img').removeClass('reverse_rotating_2')
-							        				$('.c_1 img').removeClass('rotating_2')
+							        				$('.c_1').removeClass('reverse_rotating_2')
+							        				$('.c_1').removeClass('rotating_2')
 								    			},1000)
 				        }, 250);
         	}
         	if(e.originalEvent.touches[0].pageX<c_2_width+c_2_left && e.originalEvent.touches[0].pageX >c_2_left)
         	{
-				$('.c_2 img').removeClass('rotating_2')
-				$('.c_2 img').removeClass('reverse_rotating_2')
+				$('.c_2').removeClass('rotating_2')
+				$('.c_2').removeClass('reverse_rotating_2')
 				        if (timeout2_2 !== undefined) {
 							window.clearTimeout(timeout2_2);
 				        }
 		        		if(drag_amountY>0){
-			        			$('.c_2 img').addClass('reverse_rotating')
+			        			$('.c_2').addClass('reverse_rotating')
 		        		}	
 		        		if(drag_amountY<0){
-			        			$('.c_2 img').addClass('rotating')
+			        			$('.c_2').addClass('rotating')
 		        		} 
 				        if (timeout_2 !== undefined) {
 				            			window.clearTimeout(timeout_2);
 				        }
 				        timeout_2 = window.setTimeout(function () {
-								    			if($('.c_2 img').hasClass('reverse_rotating')){
-							        				$('.c_2 img').addClass('reverse_rotating_2')
-							        				$('.c_2 img').removeClass('reverse_rotating')
+								    			if($('.c_2').hasClass('reverse_rotating')){
+							        				$('.c_2').addClass('reverse_rotating_2')
+							        				$('.c_2').removeClass('reverse_rotating')
 								    			}else{
-							        				$('.c_2 img').addClass('rotating_2')
-							        				$('.c_2 img').removeClass('rotating')
+							        				$('.c_2').addClass('rotating_2')
+							        				$('.c_2').removeClass('rotating')
 								    			}
 								    			timeout2_2 = window.setTimeout(function () {
-							        				$('.c_2 img').removeClass('reverse_rotating_2')
-							        				$('.c_2 img').removeClass('rotating_2')
+							        				$('.c_2').removeClass('reverse_rotating_2')
+							        				$('.c_2').removeClass('rotating_2')
 								    			},1000)
 				        }, 250);
         	}
         	if(e.originalEvent.touches[0].pageX<c_3_width+c_3_left && e.originalEvent.touches[0].pageX >c_3_left)
         	{
-				$('.c_3 img').removeClass('rotating_2')
-				$('.c_3 img').removeClass('reverse_rotating_2')
+				$('.c_3').removeClass('rotating_2')
+				$('.c_3').removeClass('reverse_rotating_2')
 				        if (timeout2_3 !== undefined) {
 							window.clearTimeout(timeout2_3);
 				        }
 		        		if(drag_amountY>0){
-			        			$('.c_3 img').addClass('reverse_rotating')
+			        			$('.c_3').addClass('reverse_rotating')
 		        		}	
 		        		if(drag_amountY<0){
-			        			$('.c_3 img').addClass('rotating')
+			        			$('.c_3').addClass('rotating')
 		        		} 
 				        if (timeout_3 !== undefined) {
 				            			window.clearTimeout(timeout_3);
 				        }
 				        timeout_3 = window.setTimeout(function () {
-								    			if($('.c_3 img').hasClass('reverse_rotating')){
-							        				$('.c_3 img').addClass('reverse_rotating_2')
-							        				$('.c_3 img').removeClass('reverse_rotating')
+								    			if($('.c_3').hasClass('reverse_rotating')){
+							        				$('.c_3').addClass('reverse_rotating_2')
+							        				$('.c_3').removeClass('reverse_rotating')
 								    			}else{
-							        				$('.c_3 img').addClass('rotating_2')
-							        				$('.c_3 img').removeClass('rotating')
+							        				$('.c_3').addClass('rotating_2')
+							        				$('.c_3').removeClass('rotating')
 								    			}
 								    			timeout2_3 = window.setTimeout(function () {
-							        				$('.c_3 img').removeClass('reverse_rotating_2')
-							        				$('.c_3 img').removeClass('rotating_2')
+							        				$('.c_3').removeClass('reverse_rotating_2')
+							        				$('.c_3').removeClass('rotating_2')
 								    			},1000)
 				        }, 250);
         	}
         	if(e.originalEvent.touches[0].pageX<c_4_width+c_4_left && e.originalEvent.touches[0].pageX >c_4_left)
         	{
-				$('.c_4 img').removeClass('rotating_4_2')
-				$('.c_4 img').removeClass('reverse_rotating_4_2')
+				$('.c_4').removeClass('rotating_4_2')
+				$('.c_4').removeClass('reverse_rotating_4_2')
 				        if (timeout2_4 !== undefined) {
 							window.clearTimeout(timeout2_4);
 				        }
@@ -368,36 +369,36 @@ var wholetimeout
 				            			window.clearTimeout(timeout_4);
 				        }
 		        		if(drag_amountY>0){
-			        			$('.c_4 img').addClass('reverse_rotating_4')
+			        			$('.c_4').addClass('reverse_rotating_4')
 		        		}	
 		        		if(drag_amountY<0){
-			        			$('.c_4 img').addClass('rotating_4')
+			        			$('.c_4').addClass('rotating_4')
 		        		} 
 				        timeout_4= window.setTimeout(function () {
-								    			if($('.c_4 img').hasClass('reverse_rotating_4')){
-							        				$('.c_4 img').addClass('reverse_rotating_4_2')
-							        				$('.c_4 img').removeClass('reverse_rotating_4')
-								    			}else if($('.c_4 img').hasClass('rotating_4')){
-							        				$('.c_4 img').addClass('rotating_4_2')
-							        				$('.c_4 img').removeClass('rotating_4')
+								    			if($('.c_4').hasClass('reverse_rotating_4')){
+							        				$('.c_4').addClass('reverse_rotating_4_2')
+							        				$('.c_4').removeClass('reverse_rotating_4')
+								    			}else if($('.c_4').hasClass('rotating_4')){
+							        				$('.c_4').addClass('rotating_4_2')
+							        				$('.c_4').removeClass('rotating_4')
 								    			}
 								    			timeout2_4 = window.setTimeout(function () {
-							        				$('.c_4 img').removeClass('reverse_rotating_4_2')
-							        				$('.c_4 img').removeClass('rotating_4_2')
+							        				$('.c_4').removeClass('reverse_rotating_4_2')
+							        				$('.c_4').removeClass('rotating_4_2')
 								    			},1000)
 				        }, 250);
         	}else{
 				        timeout_4= window.setTimeout(function () {
-								    			if($('.c_4 img').hasClass('reverse_rotating_4')){
-							        				$('.c_4 img').addClass('reverse_rotating_4_2')
-							        				$('.c_4 img').removeClass('reverse_rotating_4')
-								    			}else if($('.c_4 img').hasClass('rotating_4')){
-							        				$('.c_4 img').addClass('rotating_4_2')
-							        				$('.c_4 img').removeClass('rotating_4')
+								    			if($('.c_4').hasClass('reverse_rotating_4')){
+							        				$('.c_4').addClass('reverse_rotating_4_2')
+							        				$('.c_4').removeClass('reverse_rotating_4')
+								    			}else if($('.c_4').hasClass('rotating_4')){
+							        				$('.c_4').addClass('rotating_4_2')
+							        				$('.c_4').removeClass('rotating_4')
 								    			}
 								    			timeout2_4 = window.setTimeout(function () {
-							        				$('.c_4 img').removeClass('reverse_rotating_4_2')
-							        				$('.c_4 img').removeClass('rotating_4_2')
+							        				$('.c_4').removeClass('reverse_rotating_4_2')
+							        				$('.c_4').removeClass('rotating_4_2')
 								    			},1000)
 				        }, 250);}
     })
@@ -419,19 +420,12 @@ var wholetimeout
 
 
 </script>
+<img src="hangeul/info-03.png">
 <div id="wrap">
 </div>
-    <div class="c b 	c_1 c_1_b">
-    	<img src="hangeul/Untitled-6-01.PNG">
-    </div>
-    <div class="c b 	c_2 c_2_b">
-    	<img src="hangeul/Untitled-6-02.PNG">
-    </div>
-    <div class="c b 	c_3 c_3_b">
-    	<img src="hangeul/Untitled-6-03.PNG">
-    </div>
-    <div class="c b 	c_4 c_4_b">
-    	<img src="hangeul/Untitled-6-04.PNG">
-    </div>
+    <div class="c b 	c_1 c_1_b"></div>
+    <div class="c b 	c_2 c_2_b"></div>
+    <div class="c b 	c_3 c_3_b"></div>
+    <div class="c b 	c_4 c_4_b"></div>
 
 </body>
